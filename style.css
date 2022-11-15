@@ -1,0 +1,248 @@
+@font-face {
+  font-family: Circe;
+  src: url(https://zarina.ru/_nuxt/fonts/Circe-Regular.f31036e.eot);
+  src: local("Circe"), local("Circe-Regular"),
+    url(https://zarina.ru/_nuxt/fonts/Circe-Regular.f31036e.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://zarina.ru/_nuxt/fonts/Circe-Regular.fa54724.woff) format("woff"),
+    url(https://zarina.ru/_nuxt/fonts/Circe-Regular.6b28c59.ttf)
+      format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Circe;
+  src: url(https://zarina.ru/_nuxt/fonts/Circe-ExtraLight.effbad2.eot);
+  src: local("Circe ExtraLight"), local("Circe-ExtraLight"),
+    url(https://zarina.ru/_nuxt/fonts/Circe-ExtraLight.effbad2.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://zarina.ru/_nuxt/fonts/Circe-ExtraLight.5ab18c5.woff)
+      format("woff"),
+    url(https://zarina.ru/_nuxt/fonts/Circe-ExtraLight.92d19f4.ttf)
+      format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: Circe;
+  src: url(https://zarina.ru/_nuxt/fonts/Circe-Thin.c671a80.eot);
+  src: local("Circe Thin"), local("Circe-Thin"),
+    url(https://zarina.ru/_nuxt/fonts/Circe-Thin.c671a80.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://zarina.ru/_nuxt/fonts/Circe-Thin.b904f05.woff) format("woff"),
+    url(https://zarina.ru/_nuxt/fonts/Circe-Thin.8a6928d.ttf) format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: Circe;
+  src: url(https://zarina.ru/_nuxt/fonts/Circe-Light.12e7129.eot);
+  src: local("Circe Light"), local("Circe-Light"),
+    url(https://zarina.ru/_nuxt/fonts/Circe-Light.12e7129.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://zarina.ru/_nuxt/fonts/Circe-Light.7205e0c.woff) format("woff"),
+    url(https://zarina.ru/_nuxt/fonts/Circe-Light.9fd3216.ttf)
+      format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: Circe;
+  src: url(https://zarina.ru/_nuxt/fonts/Circe-Bold.d039125.eot);
+  src: local("Circe Bold"), local("Circe-Bold"),
+    url(https://zarina.ru/_nuxt/fonts/Circe-Bold.d039125.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://zarina.ru/_nuxt/fonts/Circe-Bold.4b8b401.woff) format("woff"),
+    url(https://zarina.ru/_nuxt/fonts/Circe-Bold.22f1652.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Circe;
+  src: url(https://zarina.ru/_nuxt/fonts/Circe-ExtraBold.9964577.eot);
+  src: local("Circe ExtraBold"), local("Circe-ExtraBold"),
+    url(https://zarina.ru/_nuxt/fonts/Circe-ExtraBold.9964577.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://zarina.ru/_nuxt/fonts/Circe-ExtraBold.a20afb1.woff)
+      format("woff"),
+    url(https://zarina.ru/_nuxt/fonts/Circe-ExtraBold.bbdee7f.ttf)
+      format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  font-family: Circe, sans-serif;
+  color: #383838;
+  background: #121212;
+}
+
+/************* BF STICKY HEADER ***************/
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: linear-gradient(to left, #6f0eff, #006cff, #1292d4, #6f0eff);
+  background-size: 400% 400%;
+  animation: gradientTop 8s linear infinite;
+  padding: 20px 10px 20px 10px;
+  position: relative;
+}
+
+@keyframes gradientTop {
+  0% {background-position: 0 50%;}
+  100% {background-position: 400% 200%;}
+}
+
+.bf-text {
+  text-align: center;
+  font-family: "Circe";
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.365em;
+  color: #ffffff;
+}
+
+
+/************* CATALOG GRID ***************/
+
+main {
+  padding-top: 90px;
+  grid-area: content;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+}
+
+.main {
+  padding: 50px 0;
+  position: relative;
+}
+
+.catalog__list {
+  padding: 0 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 48px;
+  margin-bottom: 48px;
+}
+
+.catalog__item {
+  width: 100%;
+  height: 100%;
+}
+
+.catalog__product,
+.catalog__product-content {
+  width: 100%;
+  position: relative;
+}
+
+.catalog__product-media {
+  position: relative;
+  width: 100%;
+  padding-top: 133.33333%;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.catalog__product-media_wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.catalog__product-media img,
+.catalog__product-media video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+}
+
+
+/************* PRODUCT CARD ***************/
+
+
+.card {
+  display: block;
+  border: 1px transparent;
+  border-radius: 5px;
+}
+
+.card:hover:after {
+  transform: scale(1);
+  filter: blur(35px);
+  opacity: 0.9;
+}
+
+.card::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.95);
+  filter: blur(15px);
+  background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3, #4e00c2);
+  opacity: 0.8;
+  transition: 0.5s;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {--rotate: 0deg;}
+  100% {--rotate: 360deg;}
+}
+
+
+/************* MEDIA QUERY ***************/
+
+
+@media screen and (max-width: 1366px) { 
+  .catalog__list { 
+  grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 1024px) { 
+  .catalog__list { 
+  padding: 0 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 36px;
+  margin-bottom: 36px;
+  }
+}
+
+@media screen and (max-width: 420px) and (min-width: 320px) {
+  .catalog__list { 
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: 0;
+  grid-row-gap: 30px;
+  }
+  .bf-text {
+  font-size: 12px;
+  letter-spacing: 0.165em;
+  color: #ffffff;
+  }
+  .stick-header {
+  background-size: 400% 400%;
+    animation: gradientTop 10s linear infinite;
+  }
+}
