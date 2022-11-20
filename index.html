@@ -253,7 +253,7 @@ main {
 }
 	  </style>
   </head>
-  <body>
+  <body id="particles-js">
 	  
 <div class="sticky-header">
 <div class="bf-text">25.11—27.11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BLACK FRIDAY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—30% НА ВСЁ</div>
@@ -347,4 +347,10 @@ main {
 </div>
 </main>
 	</body>
+		<script>/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+particlesJS.load('particles-js', 'assets/particles.json', function() {
+  console.log('callback - particles.js config loaded');
+});</script>
+	
+	<script src="particles.js"></script>
 </html>
