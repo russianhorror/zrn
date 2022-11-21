@@ -1,6 +1,6 @@
 particlesJS.load('particles-js', 'particlesjs-config.json');
 
-import Cursor from './cursor3';
+import Cursor from './cursor';
 
 const cursor = new Cursor(document.querySelector('.cursor'));
 
