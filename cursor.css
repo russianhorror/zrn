@@ -10,15 +10,13 @@
 
 body {
 	margin: 0;
-	--color-text: #ffffff;
-    --color-bg: #0e0e0e;
+	--color-text: #f4f4f4;
+    --color-bg: #121212;
     --color-link: #d20d4c;
     --color-link-hover: #ffffff;
     --color-content: #4e4e4e;
-	--font-alt: freight-display-pro, serif;
 	color: var(--color-text);
 	background-color: var(--color-bg);
-	font-family: soleil, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	/* Cursor styles */
