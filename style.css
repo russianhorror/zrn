@@ -33,8 +33,8 @@ body {
 
 .grow, .grow-small {
   transform: scale(4);
-  background: #ff0500;
-  mix-blend-mode: difference;
+  background: #2c6578;
+  mix-blend-mode: color;
   border: none;
 }
 
