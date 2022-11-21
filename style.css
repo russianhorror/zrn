@@ -10,8 +10,6 @@ body {
   position: relative;
   -webkit-tap-highlight-color: transparent;
   font-family: Circe, sans-serif;
-  color: #383838;
-  background: #14141a;
 }
 
 
@@ -153,11 +151,11 @@ main {
 }
 
 .card:hover:after {
-  transform: scale(1);
-  -webkit-transform: scale(0.95);
-  -ms-transform: scale(0.95);
-  -moz-transform: scale(0.95);
-  -o-transform: scale(0.95);
+  transform: scale(0.97);
+  -webkit-transform: scale(0.97);
+  -ms-transform: scale(0.97);
+  -moz-transform: scale(0.97);
+  -o-transform: scale(0.97);
   filter: blur(35px);
   -webkit-filter: blur(35px);
  /** filter: url(blur35.svg#blur); **/
@@ -174,11 +172,11 @@ main {
   height: 100%;
   width: 100%;
   margin: 0 auto;
-  transform: scale(0.95);
-  -webkit-transform: scale(0.95);
-  -ms-transform: scale(0.95);
-  -moz-transform: scale(0.95);
-  -o-transform: scale(0.95);
+  transform: scale(0.7);
+  -webkit-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  -o-transform: scale(0.7);
   filter: blur(15px);
   -webkit-filter: blur(15px);
 /** filter: url(blur15.svg#blur); **/
