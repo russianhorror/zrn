@@ -20,18 +20,18 @@ export default class Cursor extends EventEmitter {
         this.DOM.circleInner = this.DOM.el.querySelector('.cursor__inner');
         
         this.filterId = '#filter-1';
-        this.DOM.feDisplacementMap = document.querySelector(`${this.filterId} > feDisplacementMap`);
+        this.DOM.feTurbulence = document.querySelector(`${this.filterId} > feTurbulence`);
         
-        this.primitiveValues = {scale: 0};
+        this.primitiveValues = {turbulence: 0};
 
         this.createTimeline();
 
         this.bounds = this.DOM.el.getBoundingClientRect();
         
         this.renderedStyles = {
-            tx: {previous: 0, current: 0, amt: 0.14},
-            ty: {previous: 0, current: 0, amt: 0.14},
-            radius: {previous: 50, current: 50, amt: 0.14}
+            tx: {previous: 0, current: 0, amt: 0.2},
+            ty: {previous: 0, current: 0, amt: 0.2},
+            radius: {previous: 60, current: 60, amt: 0.2}
         };
 
         this.listen();
@@ -66,30 +66,24 @@ export default class Cursor extends EventEmitter {
                 this.DOM.circleInner.style.filter = `url(${this.filterId}`;
             },
             onUpdate: () => {
-                this.DOM.feDisplacementMap.scale.baseVal = this.primitiveValues.scale;
+                this.DOM.feTurbulence.setAttribute('baseFrequency', this.primitiveValues.turbulence);
             },
             onComplete: () => {
                 this.DOM.circleInner.style.filter = 'none';
             }
         })
         .to(this.primitiveValues, { 
-            duration: 0.1,
-            ease: 'Expo.easeOut',
-            startAt: {scale: 0},
-            scale: 60
-        })
-        .to(this.primitiveValues, { 
-            duration: 0.6,
-            ease: 'Power3.easeOut',
-            scale: 0
+            duration: 0.4,
+            startAt: {turbulence: 0.09},
+            turbulence: 0
         });
     }
     enter() {
-        this.renderedStyles['radius'].current = 120;
+        this.renderedStyles['radius'].current = 100;
         this.tl.restart();
     }
     leave() {
-        this.renderedStyles['radius'].current = 50;
+        this.renderedStyles['radius'].current = 60;
         this.tl.progress(1).kill();
     }
     listen() {
