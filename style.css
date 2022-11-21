@@ -26,14 +26,46 @@ body {
   z-index: 100;
   background: linear-gradient(to left, #6f0eff, #006cff, #1292d4, #6f0eff);
   background-size: 400% 400%;
-  animation: gradientTop 8s linear infinite;
   padding: 20px 10px 20px 10px;
+}
+
+.gradient-anim {
+    animation: gradientTop 8s linear infinite;
+    -webkit-animation-name: gradientTop;
+    -webkit-animation-duration: 8s;
+    -webkit-animation-iteration-count:infinite;
+    -ms-animation-name: gradientTop;
+    -ms-animation-duration: 8s;
+    -ms-animation-iteration-count:infinite;
+    -moz-animation-name: gradientTop;
+    -moz-animation-duration: 8s;
+    -moz-animation-iteration-count:infinite;
+    -o-animation-name: gradientTop;
+    -o-animation-duration: 8s;
+    -o-animation-iteration-count:infinite;
 }
 
 @keyframes gradientTop {
   0% {background-position: 0 50%;}
   100% {background-position: 400% 200%;}
 }
+@-webkit-keyframes gradientTop {
+  0% {-webkit-background-position: 0 50%;}
+  100% {-webkit-background-position: 400% 200%;}
+}
+@-o-keyframes gradientTop {
+  0% {-o-background-position: 0 50%;}
+  100% {-o-background-position: 400% 200%;}
+}
+@-ms-keyframes gradientTop {
+  0% {-ms-background-position: 0 50%;}
+  100% {-ms-background-position: 400% 200%;}
+}
+@-moz-keyframes gradientTop {
+  0% {-moz-background-position: 0 50%;}
+  100% {-moz-background-position: 400% 200%;}
+}
+
 
 .bf-text {
   text-align: center;
@@ -140,10 +172,42 @@ main {
   background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3, #4e00c2);
   opacity: 0.8;
   transition: 0.5s;
-  animation: spin 2.5s linear infinite;
 }
 
+.card-anim {
+    animation: spin 2.5s linear infinite;
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 2.5s;
+    -webkit-animation-iteration-count:infinite;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 2.5s;
+    -ms-animation-iteration-count:infinite;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 2.5s;
+    -moz-animation-iteration-count:infinite;
+    -o-animation-name: spin;
+    -o-animation-duration: 2.5s;
+    -o-animation-iteration-count:infinite;
+}
+
+
 @keyframes spin {
+  0% {--rotate: 0deg;}
+  100% {--rotate: 360deg;}
+}
+@-webkit-keyframes spin {
+  0% {--rotate: 0deg;}
+  100% {--rotate: 360deg;}
+}
+@-o-keyframes spin {
+  0% {--rotate: 0deg;}
+  100% {--rotate: 360deg;}
+}
+@-ms-keyframes spin {
+  0% {--rotate: 0deg;}
+  100% {--rotate: 360deg;}
+}
+@-moz-keyframes spin {
   0% {--rotate: 0deg;}
   100% {--rotate: 360deg;}
 }
