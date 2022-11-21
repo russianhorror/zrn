@@ -11,6 +11,7 @@
 body {
 	margin: 0;
 	--color-text: #f4f4f4;
+	--color-bg: #14141a;
     --color-link: #d20d4c;
     --color-link-hover: #ffffff;
     --color-content: #4e4e4e;
