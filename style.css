@@ -33,9 +33,9 @@ body {
 
 .grow, .grow-small {
   transform: scale(4);
-  background: #00cbf0;
-  mix-blend-mode: saturation;
-  border: none;
+  background: #ff0500;
+  mix-blend-mode: difference;
+  border: 1px solid #ffffff;
 }
 
 .grow-small {
