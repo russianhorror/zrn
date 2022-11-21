@@ -162,7 +162,7 @@ main {
   -webkit-filter: blur(35px);
  /** filter: url(blur35.svg#blur); **/
   filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='35');
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .card::after {
