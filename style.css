@@ -154,7 +154,14 @@ main {
 
 .card:hover:after {
   transform: scale(1);
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -o-transform: scale(0.95);
   filter: blur(35px);
+  -webkit-filter: blur(35px);
+  filter: url(blur35.svg#blur);
+  filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='35');
   opacity: 0.9;
 }
 
@@ -168,14 +175,23 @@ main {
   width: 100%;
   margin: 0 auto;
   transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -o-transform: scale(0.95);
   filter: blur(15px);
+  -webkit-filter: blur(15px);
+  filter: url(blur15.svg#blur);
+  filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='15');
   background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3, #4e00c2);
   opacity: 0.8;
   transition: 0.5s;
-}
-
-.card-anim {
-    animation: spin 2.5s linear infinite;
+  -webkit-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  
+     animation: spin 2.5s linear infinite;
     -webkit-animation-name: spin;
     -webkit-animation-duration: 2.5s;
     -webkit-animation-iteration-count:infinite;
@@ -189,7 +205,6 @@ main {
     -o-animation-duration: 2.5s;
     -o-animation-iteration-count:infinite;
 }
-
 
 @keyframes spin {
   0% {--rotate: 0deg;}
