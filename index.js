@@ -1,4 +1,4 @@
-import Cursor from './cursor';
+import Cursor from './cursor.js';
 
 const cursor = new Cursor(document.querySelector('.cursor'));
 
