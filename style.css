@@ -17,31 +17,57 @@ body {
 /************* CURSOR ***************/
 
 
-.cursor {
-  position: fixed;
-  width: 40px;
-  height: 40px;
-  margin-left: -20px;
-  margin-top: -20px;
-  border-radius: 50%;
-  border: 2px solid #FFFFFF;
-  transition: transform 0.3s ease;
-  transform-origin: center center;
+
+#cursor {
+  position: absolute;
+  background-color: rgba(255,255,255,1);
+  border: 2px solid rgba(255,255,255,0);
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  transition: 
+    0.5s cubic-bezier(.21,.78,.33,.9) transform, 
+    0.5s cubic-bezier(.21,.78,.33,.9) background-color,
+    0.2s cubic-bezier(.21,.78,.33,.9) opacity,
+    0.5s cubic-bezier(.21,.78,.33,.9) border;
+  user-select: none;
+  pointer-events: none;
+  z-index: 10000;
+  transform: scale(1);
+}
+#cursor.active {
+    background-color: rgba(255,255,255,0);
+    border: 2px solid rgba(255,255,255,1);
+}
+
+#aura {
+  position: absolute;
+  border: 2px solid rgba(255,255,255,1);
+  background-color: rgba(255,255,255,0);
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  transition: 
+    0.5s cubic-bezier(.21,.78,.33,.9) transform, 
+    0.5s cubic-bezier(.21,.78,.33,.9) background-color,
+    0.2s cubic-bezier(.21,.78,.33,.9) opacity,
+    0.5s cubic-bezier(.21,.78,.33,.9) border;
+  user-select: none;
   pointer-events: none;
   z-index: 1000;
+  transform: translate(5px, 5px);
 }
-
-.grow, .grow-small {
-  transform: scale(4);
-  background: #2c6578;
-  mix-blend-mode: color;
-  border: none;
-}
-
-.grow-small {
+#aura.active {
+  border: 1px solid rgba(255,255,255,.5);
   transform: scale(2);
+  	background-color: transparent;
+  	-webkit-backdrop-filter: blur(2px);
+	backdrop-filter: blur(2px)
 }
 
+.hidden {
+  opacity: 0;
+}
 
 
 /************* BF STICKY HEADER ***************/
