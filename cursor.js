@@ -1,4 +1,4 @@
-import { gsap } from 'gsap';
+import { gsap } from './gsap.min.js';
 import { map, lerp, calcWinsize, getMousePos } from './utils';
 import { EventEmitter } from 'events';
 
