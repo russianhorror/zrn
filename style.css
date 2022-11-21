@@ -24,7 +24,7 @@ body {
   margin-left: -20px;
   margin-top: -20px;
   border-radius: 50%;
-  border: 2px solid #FBAB7E;
+  border: 2px solid #FFFFFF;
   transition: transform 0.3s ease;
   transform-origin: center center;
   pointer-events: none;
