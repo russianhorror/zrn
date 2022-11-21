@@ -1,38 +1,92 @@
 particlesJS.load('particles-js', 'particlesjs-config.json');
 
-let cursor = document.querySelector('.cursor');
-let cursorScale = document.querySelectorAll('.cursor-scale'); 
-let mouseX = 0;
-let mouseY = 0;
+// Cursor
+var cursor = document.getElementById("cursor"),
+	follower = document.getElementById("aura");
 
-gsap.to({}, 0.016, {
-  repeat: -1,
-  onRepeat: function(){
-    gsap.set(cursor, {
-      css: {
-        left: mouseX,
-        top: mouseY,
-      }
-    })
-  }
+// Cursor - coords
+var posX = 0,
+	posY = 0;
+
+var mouseX = 0,
+	mouseY = 0;
+
+// Cursor position
+function mouseCoords(e) {
+
+    // For IE
+    if (document.all)  {
+      mouseX = event.x + document.body.scrollLeft;
+      mouseY = event.y + document.body.scrollTop;
+
+    // For Everything else
+    } else {
+      mouseX = e.pageX; 
+      mouseY = e.pageY; 
+    }
+}
+
+// GSAP Cursor position css change
+gsap.to({}, 0.010, {
+	repeat: -1,
+	onRepeat: function() {
+		posX += (mouseX - posX) / 9;
+		posY += (mouseY - posY) / 9;
+
+		gsap.set(follower, {
+			css: {
+				left: posX - 48,
+				top: posY - 48
+			}
+		});
+
+		gsap.set(cursor, {
+			css: {
+				left: mouseX,
+				top: mouseY
+			}
+		});
+	}
 });
 
-window.addEventListener('mousemove', (e)=> {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-})
+// Cursor on links hover add/remove class
+links = document.getElementsByTagName('a');
+for (var i = 0; i < links.length; i++) {
+	// Cursor hover link
+	links[i].addEventListener("mouseover", function () {
+		cursor.classList.add("active");
+		follower.classList.add("active");
+  });
+	// Cursor leave out link
+  links[i].addEventListener("mouseout", function () {
+		cursor.classList.remove("active");
+		follower.classList.remove("active");
+  });
+}
 
-cursorScale.forEach(link => {
-  link.addEventListener('mousemove', ()=> {
-    cursor.classList.add('grow'); 
-    if (link.classList.contains('small')){
-      cursor.classList.remove('grow');
-      cursor.classList.add('grow-small');
-    }
+// Cursor on card hover add/remove class
+links = document.getElementsByClassName('card');
+for (var i = 0; i < links.length; i++) {
+	// Cursor hover card
+	links[i].addEventListener("mouseover", function () {
+		cursor.classList.add("active");
+		follower.classList.add("active");
   });
-  
-  link.addEventListener('mouseleave', ()=> {
-    cursor.classList.remove('grow');
-    cursor.classList.remove('grow-small');
+	// Cursor leave out card
+  links[i].addEventListener("mouseout", function () {
+		cursor.classList.remove("active");
+		follower.classList.remove("active");
   });
-})
+}
+
+// Hide cursor when off screen
+function mouseOut() {
+	cursor.classList.add("hidden");
+	follower.classList.add("hidden");
+}
+
+// bring back when back to screen
+function mouseIn() {
+	cursor.classList.remove("hidden");
+	follower.classList.remove("hidden");
+}
