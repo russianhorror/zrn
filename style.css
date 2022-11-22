@@ -18,9 +18,70 @@ body {
 
 
 
+
+svg #spintext {
+  position: absolute;
+  fill: #ffffff;
+  transform-origin: center;
+  fill-opacity: 0;
+  width: 100px;
+  height: 100px;
+  user-select: none;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+#spintext text {
+  fill-opacity: 0;
+  transition: 0.2s cubic-bezier(.21,.78,.33,.9) fill-opacity;
+}
+
+#spintext.active text {
+  fill-opacity: 0.8;
+}
+
+#spintext {
+    -webkit-animation-name: spin2;
+    -webkit-animation-duration: 5000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin2;
+    -moz-animation-duration: 5000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin2;
+    -ms-animation-duration: 5000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    animation-name: spin2;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@-ms-keyframes spin2 {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin2 {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin2 {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
 #cursor {
   position: absolute;
-  background-color: rgba(255,255,255,1);
+  background-color: rgba(255,255,255,0);
   border: 2px solid rgba(255,255,255,0);
   width: 12px;
   height: 12px;
@@ -29,7 +90,7 @@ body {
     0.5s cubic-bezier(.21,.78,.33,.9) transform, 
     0.5s cubic-bezier(.21,.78,.33,.9) background-color,
     0.2s cubic-bezier(.21,.78,.33,.9) opacity,
-    0.5s cubic-bezier(.21,.78,.33,.9) border;
+    0.1s cubic-bezier(.21,.78,.33,.9) border;
   user-select: none;
   pointer-events: none;
   z-index: 10000;
@@ -37,7 +98,7 @@ body {
 }
 #cursor.active {
     background-color: rgba(255,255,255,0);
-    border: 2px solid rgba(255,255,255,1);
+    border: 2px solid rgba(255,255,255,0);
 }
 
 #aura {
@@ -51,23 +112,24 @@ body {
     0.5s cubic-bezier(.21,.78,.33,.9) transform, 
     0.5s cubic-bezier(.21,.78,.33,.9) background-color,
     0.2s cubic-bezier(.21,.78,.33,.9) opacity,
-    0.5s cubic-bezier(.21,.78,.33,.9) border;
+    0.1s cubic-bezier(.21,.78,.33,.9) border;
   user-select: none;
   pointer-events: none;
   z-index: 1000;
-  transform: translate(5px, 5px);
+  transform: scale(0.8);
 }
 #aura.active {
-  border: 1px solid rgba(255,255,255,.5);
+  border: 1px solid rgba(255,255,255,.2);
   transform: scale(2);
-  	background-color: transparent;
-  	-webkit-backdrop-filter: blur(2px);
-	backdrop-filter: blur(2px)
+  background-color: transparent;
+  -webkit-backdrop-filter: blur(1px);
+	backdrop-filter: blur(1px);
 }
 
 .hidden {
   opacity: 0;
 }
+
 
 
 /************* BF STICKY HEADER ***************/
