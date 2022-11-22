@@ -2,7 +2,8 @@ particlesJS.load('particles-js', 'particlesjs-config.json');
 
 // Cursor
 var cursor = document.getElementById("cursor"),
-	follower = document.getElementById("aura");
+    follower = document.getElementById("aura"),
+    follower2 = document.getElementById("spintext");
 
 // Cursor - coords
 var posX = 0,
@@ -21,8 +22,8 @@ function mouseCoords(e) {
 
     // For Everything else
     } else {
-      mouseX = e.pageX; 
-      mouseY = e.pageY; 
+      mouseX = e.pageX; // Координата X курсора
+      mouseY = e.pageY; // Координата Y курсора
     }
 }
 
@@ -34,6 +35,13 @@ gsap.to({}, 0.010, {
 		posY += (mouseY - posY) / 9;
 
 		gsap.set(follower, {
+			css: {
+				left: posX - 48,
+				top: posY - 48
+			}
+		});
+    
+ 		gsap.set(follower2, {
 			css: {
 				left: posX - 48,
 				top: posY - 48
@@ -56,26 +64,30 @@ for (var i = 0; i < links.length; i++) {
 	links[i].addEventListener("mouseover", function () {
 		cursor.classList.add("active");
 		follower.classList.add("active");
+		follower2.classList.add("active");
   });
 	// Cursor leave out link
   links[i].addEventListener("mouseout", function () {
 		cursor.classList.remove("active");
 		follower.classList.remove("active");
+	   	follower2.classList.remove("active");
   });
 }
 
 // Cursor on card hover add/remove class
 links = document.getElementsByClassName('card');
 for (var i = 0; i < links.length; i++) {
-	// Cursor hover card
+	// Cursor hover link
 	links[i].addEventListener("mouseover", function () {
 		cursor.classList.add("active");
 		follower.classList.add("active");
+		follower2.classList.add("active");
   });
-	// Cursor leave out card
+	// Cursor leave out link
   links[i].addEventListener("mouseout", function () {
 		cursor.classList.remove("active");
 		follower.classList.remove("active");
+		follower2.classList.remove("active");
   });
 }
 
@@ -83,10 +95,12 @@ for (var i = 0; i < links.length; i++) {
 function mouseOut() {
 	cursor.classList.add("hidden");
 	follower.classList.add("hidden");
+	follower2.classList.add("hidden");
 }
 
 // bring back when back to screen
 function mouseIn() {
 	cursor.classList.remove("hidden");
 	follower.classList.remove("hidden");
+	follower2.classList.remove("hidden");
 }
