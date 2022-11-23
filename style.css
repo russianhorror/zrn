@@ -186,7 +186,7 @@
   color: #f2f2f2;
 }
 .theme--newyear .catalog__product-actions {
-  background: #02202e;
+  background: transparent;
 }
 .theme--newyear .catalog__product-media {
   background: #383838;
@@ -195,7 +195,18 @@
 .theme--newyear .catalog__product-actions_title,
 .theme--newyear .catalog__product-price_current {
   color: #f2f2f2;
+  font-size: 14px;
+  letter-spacing: 1px;
 }
+.theme--newyear .catalog__product-actions_item:hover {
+  cursor: pointer;
+  color: #02202e;
+  background-color: #f2f2f2;
+  border: 0px solid #f2f2f2;
+  border-radius: 18px;
+}
+}
+
 .theme--newyear .catalog__product-actions_subscribe {
   color: grey;
 }
@@ -694,9 +705,9 @@ svg #spintext {
 
 
 .card {
-  display: block;
+  /* display: block; */
   border: 1px transparent;
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 
 .card:hover:after {
@@ -712,20 +723,20 @@ svg #spintext {
   opacity: 1;
 }
 
-.card::after {
+.card::before {
   position: absolute;
   content: "";
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -10;
   height: 100%;
   width: 100%;
   margin: 0 auto;
-  transform: scale(0.7);
-  -webkit-transform: scale(0.7);
-  -ms-transform: scale(0.7);
-  -moz-transform: scale(0.7);
-  -o-transform: scale(0.7);
+  transform: scale(2);
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  -moz-transform: scale(2);
+  -o-transform: scale(2);
   filter: blur(15px);
   -webkit-filter: blur(15px);
 /** filter: url(blur15.svg#blur); **/
@@ -737,19 +748,19 @@ svg #spintext {
   -ms-transition: 0.5s;
   -moz-transition: 0.5s;
   -o-transition: 0.5s;
-     animation: spin 2.5s linear infinite;
-    -webkit-animation-name: spin;
-    -webkit-animation-duration: 2.5s;
-    -webkit-animation-iteration-count:infinite;
-    -ms-animation-name: spin;
-    -ms-animation-duration: 2.5s;
-    -ms-animation-iteration-count:infinite;
-    -moz-animation-name: spin;
-    -moz-animation-duration: 2.5s;
-    -moz-animation-iteration-count:infinite;
-    -o-animation-name: spin;
-    -o-animation-duration: 2.5s;
-    -o-animation-iteration-count:infinite;
+  animation: spin 2.5s linear infinite;
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 2.5s;
+  -webkit-animation-iteration-count:infinite;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 2.5s;
+  -ms-animation-iteration-count:infinite;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 2.5s;
+  -moz-animation-iteration-count:infinite;
+  -o-animation-name: spin;
+  -o-animation-duration: 2.5s;
+  -o-animation-iteration-count:infinite;
 }
 
 @keyframes spin {
