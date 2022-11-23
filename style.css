@@ -204,6 +204,7 @@
 .theme--newyear .catalog__product-actions_title,
 .theme--newyear .catalog__product-price_current {
   color: #f2f2f2;
+  /* padding: 4px 9px 3px 10px; */
   font-size: 14px;
   letter-spacing: 0.1em;
 }
@@ -214,7 +215,12 @@
   border: 0px solid #f2f2f2;
   border-radius: 18px;
 }
+.theme--newyear .catalog__product-actions_item {
+  padding: 4px 9px 3px 10px;
 }
+
+
+
 
 .theme--newyear .catalog__product-actions_subscribe {
   color: grey;
