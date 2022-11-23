@@ -528,12 +528,6 @@ border-radius:5px;
 }
 
 
-@property --rotate {
-  syntax: "<angle>";
-  initial-value: 132deg;
-  inherits: false;
-}
-
 /************* CURSOR ***************/
 
 
@@ -729,12 +723,6 @@ svg #spintext {
   transition: 0.5s;
   animation: gradientTop 8s linear infinite;
 }
-
-@keyframes spin {
-  0% {--rotate: 0deg;}
-  100% {--rotate: 360deg;}
-}
-
 
 
 /*****************************************/
