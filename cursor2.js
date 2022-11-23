@@ -99,7 +99,7 @@
       applyProperties(this.element, this.initialStyles);
       this.update();
       
-      document.body.appendChild(this.element);
+      document.body.insertBefore(this.element);
     };
     
     this.update = function() {
