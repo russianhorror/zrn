@@ -703,12 +703,6 @@ svg #spintext {
 
 
 
-.card {
-  /* display: block; */
-  border: 1px transparent;
-  /* border-radius: 5px; */
-}
-
 .catalog__product-actions:hover:after {
   opacity: 1;
 }
@@ -731,6 +725,28 @@ svg #spintext {
   animation: gradientTop 8s linear infinite;
 }
 
+.bottom_glow {
+  border: 1px transparent;
+  border-radius: 5px;
+}
+
+.bottom_glow::after {
+  position: absolute;
+  content: "";
+  top: 50px;
+  left: 0;
+  z-index: -10;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(2);
+  filter: blur(35px);
+  background: linear-gradient(to left, #6f0eff, #006cff, #1292d4, #6f0eff);
+  background-size: 400% 400%;
+  opacity: 0.8;
+  transition: 0.5s;
+  animation: gradientTop 8s linear infinite;
+}
 
 /*****************************************/
 /********** PARTICLES CONTAINER **********/ 
