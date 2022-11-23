@@ -5,7 +5,7 @@
   var height = window.innerHeight;
   var cursor = {x: width/2, y: width/2};
   var particles = [];
-  var thefirstChild = getElementById("cursor");
+  var thefirstChild = querySelector("#cursor");
   
   function init() {
     bindEvents();
