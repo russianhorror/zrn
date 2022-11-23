@@ -182,9 +182,17 @@
   background: #383838;
 }
 .theme--newyear .catalog__product-look_btn {
-  border: 1px solid #f2f2f2;
-  color: #f2f2f2;
+  border: 1px solid hsl(200deg 20% 50% / 30%);
+  border-radius: 5px;
+  color: hsl(200deg 100% 93% / 58%);
 }
+
+.theme--newyear .catalog__product-look_btn:hover {
+  background-color: transparent;
+  border: 1px solid #f2f2f2;
+  color: #fff;
+}
+
 .theme--newyear .catalog__product-actions {
   background: transparent;
 }
@@ -196,7 +204,7 @@
 .theme--newyear .catalog__product-price_current {
   color: #f2f2f2;
   font-size: 14px;
-  letter-spacing: 1px;
+  letter-spacing: 0.1em;
 }
 .theme--newyear .catalog__product-actions_item:hover {
   cursor: pointer;
@@ -675,22 +683,6 @@ svg #spintext {
   0% {background-position: 0 50%;}
   100% {background-position: 400% 200%;}
 }
-@-webkit-keyframes gradientTop {
-  0% {-webkit-background-position: 0 50%;}
-  100% {-webkit-background-position: 400% 200%;}
-}
-@-o-keyframes gradientTop {
-  0% {-o-background-position: 0 50%;}
-  100% {-o-background-position: 400% 200%;}
-}
-@-ms-keyframes gradientTop {
-  0% {-ms-background-position: 0 50%;}
-  100% {-ms-background-position: 400% 200%;}
-}
-@-moz-keyframes gradientTop {
-  0% {-moz-background-position: 0 50%;}
-  100% {-moz-background-position: 400% 200%;}
-}
 
 
 .bf-text {
@@ -716,79 +708,33 @@ svg #spintext {
   /* border-radius: 5px; */
 }
 
-.card:hover:after {
-  transform: scale(0.97);
-  -webkit-transform: scale(0.97);
-  -ms-transform: scale(0.97);
-  -moz-transform: scale(0.97);
-  -o-transform: scale(0.97);
-  filter: blur(35px);
-  -webkit-filter: blur(35px);
- /** filter: url(blur35.svg#blur); **/
-  filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='35');
+.catalog__product-actions:hover:after {
   opacity: 1;
 }
 
-.card::before {
+.catalog__product-actions::after {
   position: absolute;
   content: "";
-  top: 0;
+  top: 50px;
   left: 0;
   z-index: -10;
   height: 100%;
   width: 100%;
   margin: 0 auto;
   transform: scale(2);
-  -webkit-transform: scale(2);
-  -ms-transform: scale(2);
-  -moz-transform: scale(2);
-  -o-transform: scale(2);
-  filter: blur(15px);
-  -webkit-filter: blur(15px);
-/** filter: url(blur15.svg#blur); **/
-  filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='15');
-  background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3, #4e00c2);
+  filter: blur(35px);
+  background: linear-gradient(to left, #6f0eff, #006cff, #1292d4, #6f0eff);
+  background-size: 400% 400%;
   opacity: 0.8;
   transition: 0.5s;
-  -webkit-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  animation: spin 2.5s linear infinite;
-  -webkit-animation-name: spin;
-  -webkit-animation-duration: 2.5s;
-  -webkit-animation-iteration-count:infinite;
-  -ms-animation-name: spin;
-  -ms-animation-duration: 2.5s;
-  -ms-animation-iteration-count:infinite;
-  -moz-animation-name: spin;
-  -moz-animation-duration: 2.5s;
-  -moz-animation-iteration-count:infinite;
-  -o-animation-name: spin;
-  -o-animation-duration: 2.5s;
-  -o-animation-iteration-count:infinite;
+  animation: gradientTop 8s linear infinite;
 }
 
 @keyframes spin {
   0% {--rotate: 0deg;}
   100% {--rotate: 360deg;}
 }
-@-webkit-keyframes spin {
-  0% {--rotate: 0deg;}
-  100% {--rotate: 360deg;}
-}
-@-o-keyframes spin {
-  0% {--rotate: 0deg;}
-  100% {--rotate: 360deg;}
-}
-@-ms-keyframes spin {
-  0% {--rotate: 0deg;}
-  100% {--rotate: 360deg;}
-}
-@-moz-keyframes spin {
-  0% {--rotate: 0deg;}
-  100% {--rotate: 360deg;}
-}
+
 
 
 /*****************************************/
