@@ -160,6 +160,16 @@
 .theme--newyear .catalog__view-item.active {
   color: #f2f2f2;
 }
+
+.theme--newyear .catalog__content {
+  margin-bottom: 0;
+}
+@media (max-width: 767px) {
+.theme--newyear .catalog__content {
+    margin-bottom: 0;
+  }
+}
+
 .theme--newyear .catalog__view-item:hover {
   color: #f2f2f2;
 }
