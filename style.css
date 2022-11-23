@@ -154,7 +154,7 @@
 }
 .theme--newyear .catalog__actions,
 .theme--newyear .catalog__actions-wrapper {
-  background: #02202e;
+  background: transparent;
   color: #f2f2f2;
 }
 .theme--newyear .catalog__view-item.active {
@@ -538,23 +538,37 @@ border-radius:5px;
 }
 
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /************* CURSOR ***************/
 
 
 svg #spintext {
   position: absolute;
   fill: #ffffff;
-  transform-origin: center;
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
   fill-opacity: 0;
   width: 100px;
   height: 100px;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   pointer-events: none;
   z-index: 10000;
 }
 
 #spintext text {
   fill-opacity: 0;
+  -webkit-transition: 0.2s cubic-bezier(.21,.78,.33,.9) fill-opacity;
+  -o-transition: 0.2s cubic-bezier(.21,.78,.33,.9) fill-opacity;
   transition: 0.2s cubic-bezier(.21,.78,.33,.9) fill-opacity;
 }
 
@@ -562,18 +576,11 @@ svg #spintext {
   fill-opacity: 0.8;
 }
 
-#spintext {
-    animation: spin2 5000ms linear infinite;
-}
+#spintext {-webkit-animation: spin2 5000ms linear infinite;animation: spin2 5000ms linear infinite;}
 
-@keyframes spin2 {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(-360deg);
-    }
-}
+@-webkit-keyframes spin2 {from {-webkit-transform:rotate(0deg);transform:rotate(0deg);} to {-webkit-transform:rotate(-360deg);transform:rotate(-360deg);}}
+
+@keyframes spin2 {from {-webkit-transform:rotate(0deg);transform:rotate(0deg);} to {-webkit-transform:rotate(-360deg);transform:rotate(-360deg);}}
 
 #cursor {
   position: absolute;
@@ -582,15 +589,41 @@ svg #spintext {
   width: 12px;
   height: 12px;
   border-radius: 100%;
+  -webkit-transition: 
+    0.5s cubic-bezier(.21,.78,.33,.9) background-color,
+    0.2s cubic-bezier(.21,.78,.33,.9) opacity,
+    0.1s cubic-bezier(.21,.78,.33,.9) border, 
+    0.5s cubic-bezier(.21,.78,.33,.9) -webkit-transform;
+  transition: 
+    0.5s cubic-bezier(.21,.78,.33,.9) background-color,
+    0.2s cubic-bezier(.21,.78,.33,.9) opacity,
+    0.1s cubic-bezier(.21,.78,.33,.9) border, 
+    0.5s cubic-bezier(.21,.78,.33,.9) -webkit-transform;
+  -o-transition: 
+    0.5s cubic-bezier(.21,.78,.33,.9) transform, 
+    0.5s cubic-bezier(.21,.78,.33,.9) background-color,
+    0.2s cubic-bezier(.21,.78,.33,.9) opacity,
+    0.1s cubic-bezier(.21,.78,.33,.9) border;
   transition: 
     0.5s cubic-bezier(.21,.78,.33,.9) transform, 
     0.5s cubic-bezier(.21,.78,.33,.9) background-color,
     0.2s cubic-bezier(.21,.78,.33,.9) opacity,
     0.1s cubic-bezier(.21,.78,.33,.9) border;
-  user-select: none;
+  transition: 
+    0.5s cubic-bezier(.21,.78,.33,.9) transform, 
+    0.5s cubic-bezier(.21,.78,.33,.9) background-color,
+    0.2s cubic-bezier(.21,.78,.33,.9) opacity,
+    0.1s cubic-bezier(.21,.78,.33,.9) border, 
+    0.5s cubic-bezier(.21,.78,.33,.9) -webkit-transform;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   pointer-events: none;
   z-index: 10000;
-  transform: scale(1);
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
 }
 #cursor.active {
     background-color: rgba(255,255,255,0);
@@ -604,19 +637,47 @@ svg #spintext {
   width: 100px;
   height: 100px;
   border-radius: 100%;
+  -webkit-transition: 
+    0.5s cubic-bezier(.21,.78,.33,.9) background-color,
+    0.2s cubic-bezier(.21,.78,.33,.9) opacity,
+    0.1s cubic-bezier(.21,.78,.33,.9) border, 
+    0.5s cubic-bezier(.21,.78,.33,.9) -webkit-transform;
+  transition: 
+    0.5s cubic-bezier(.21,.78,.33,.9) background-color,
+    0.2s cubic-bezier(.21,.78,.33,.9) opacity,
+    0.1s cubic-bezier(.21,.78,.33,.9) border, 
+    0.5s cubic-bezier(.21,.78,.33,.9) -webkit-transform;
+  -o-transition: 
+    0.5s cubic-bezier(.21,.78,.33,.9) transform, 
+    0.5s cubic-bezier(.21,.78,.33,.9) background-color,
+    0.2s cubic-bezier(.21,.78,.33,.9) opacity,
+    0.1s cubic-bezier(.21,.78,.33,.9) border;
   transition: 
     0.5s cubic-bezier(.21,.78,.33,.9) transform, 
     0.5s cubic-bezier(.21,.78,.33,.9) background-color,
     0.2s cubic-bezier(.21,.78,.33,.9) opacity,
     0.1s cubic-bezier(.21,.78,.33,.9) border;
-  user-select: none;
+  transition: 
+    0.5s cubic-bezier(.21,.78,.33,.9) transform, 
+    0.5s cubic-bezier(.21,.78,.33,.9) background-color,
+    0.2s cubic-bezier(.21,.78,.33,.9) opacity,
+    0.1s cubic-bezier(.21,.78,.33,.9) border, 
+    0.5s cubic-bezier(.21,.78,.33,.9) -webkit-transform;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   pointer-events: none;
   z-index: 1000;
-  transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+          transform: scale(0.8);
 }
 #aura.active {
   border: 1px solid rgba(255,255,255,0);
-  transform: scale(2);
+  -webkit-transform: scale(2);
+      -ms-transform: scale(2);
+          transform: scale(2);
   background-color: rgba(255,255,255,0);
   /* -webkit-backdrop-filter: blur(1px);
 	backdrop-filter: blur(1px); */
@@ -636,19 +697,18 @@ svg #spintext {
   position: sticky;
   top: 0;
   z-index: 100;
+  background: -webkit-gradient(linear, right top, left top, from(#6f0eff), color-stop(#006cff), color-stop(#1292d4), to(#6f0eff));
+  background: -o-linear-gradient(right, #6f0eff, #006cff, #1292d4, #6f0eff);
   background: linear-gradient(to left, #6f0eff, #006cff, #1292d4, #6f0eff);
   background-size: 400% 400%;
   padding: 20px 10px 20px 10px;
 }
 
-.gradient-anim {
-    animation: gradientTop 8s linear infinite;
-}
+.gradient-anim {-webkit-animation: gradientTop 8s linear infinite;animation: gradientTop 8s linear infinite;}
 
-@keyframes gradientTop {
-  0% {background-position: 0 50%;}
-  100% {background-position: 400% 200%;}
-}
+@-webkit-keyframes gradientTop {0% {background-position: 0 50%;} 100% {background-position: 400% 200%;}}
+
+@keyframes gradientTop {0% {background-position: 0 50%;} 100% {background-position: 400% 200%;}}
 
 
 .bf-text {
@@ -681,13 +741,21 @@ svg #spintext {
   height: 100%;
   width: 100%;
   margin: 0 auto;
-  transform: scale(2);
-  filter: blur(35px);
+  -webkit-transform: scale(2);
+      -ms-transform: scale(2);
+          transform: scale(2);
+  -webkit-filter: blur(35px);
+          filter: blur(35px);
+  background: -webkit-gradient(linear, right top, left top, from(#6f0eff), color-stop(#006cff), color-stop(#1292d4), to(#6f0eff));
+  background: -o-linear-gradient(right, #6f0eff, #006cff, #1292d4, #6f0eff);
   background: linear-gradient(to left, #6f0eff, #006cff, #1292d4, #6f0eff);
   background-size: 400% 400%;
   opacity: 0.8;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
-  animation: gradientTop 8s linear infinite;
+  -webkit-animation: gradientTop 8s linear infinite;
+          animation: gradientTop 8s linear infinite;
 }
 
 .bottom_glow {
@@ -699,19 +767,27 @@ svg #spintext {
   border-radius: 20px;
   position: absolute;
   content: "";
-  top: 55%;
-  left: 5%;
+  top: 4%;
+  left: 12.5%;
   z-index: -10;
-  height: 25%;
-  width: 90%;
+  height: 60%;
+  width: 70%;
   margin: 0 auto;
-  transform: scale(1);
-  filter: blur(35px);
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-filter: blur(35px);
+          filter: blur(35px);
+  background: -webkit-gradient(linear, right top, left top, from(#6f0eff), color-stop(#006cff), color-stop(#1292d4), to(#6f0eff));
+  background: -o-linear-gradient(right, #6f0eff, #006cff, #1292d4, #6f0eff);
   background: linear-gradient(to left, #6f0eff, #006cff, #1292d4, #6f0eff);
   background-size: 400% 400%;
   opacity: 1;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
-  animation: gradientTop 8s linear infinite;
+  -webkit-animation: gradientTop 8s linear infinite;
+          animation: gradientTop 8s linear infinite;
 }
 
 /*****************************************/
