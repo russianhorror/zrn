@@ -1,5 +1,5 @@
 .theme--newyear {
-  background: #02202e;
+  background: #030c20;
   color: #f2f2f2;
 }
 
@@ -53,7 +53,7 @@
   background: grey;
 }
 .theme--newyear .header {
-  background-color: #02202e;
+  background-color: #030c20;
 }
 .theme--newyear .header svg {
   color: #f2f2f2;
@@ -170,7 +170,7 @@
 .theme--newyear .pagination__list-item {
   margin-left: 4px;
   border: 1px solid #383838;
-  background: #02202e;
+  background: #030c20;
   color: #f2f2f2;
 }
 .theme--newyear .pagination__list-item.active {
@@ -210,7 +210,7 @@
 }
 .theme--newyear .catalog__product-actions_item:hover {
   cursor: pointer;
-  color: #02202e;
+  color: #030c20;
   background-color: #f2f2f2;
   border: 0px solid #f2f2f2;
   border-radius: 18px;
@@ -239,10 +239,10 @@ border-radius:5px;
 }
 
 .theme--newyear .catalog__sort-content {
-  background: #02202e;
+  background: #030c20;
 }
 .theme--newyear .catalog__sort-content .z-radio .z-radio-container {
-  border-color: #02202e;
+  border-color: #030c20;
 }
 .theme--newyear
   .catalog__sort-content
@@ -267,7 +267,7 @@ border-radius:5px;
 }
 .theme--newyear .z-button.z-button-white {
   color: #f2f2f2;
-  background: #02202e;
+  background: #030c20;
   border: 1px solid #f2f2f2;
 }
 .theme--newyear .product__bottom {
@@ -331,7 +331,7 @@ border-radius:5px;
   background: #06f;
 }
 .theme--newyear .product__bw-card.black .product__bw-code {
-  background: #02202e;
+  background: #030c20;
 }
 .theme--newyear .product__bw-note {
   color: #f2f2f2;
@@ -479,13 +479,13 @@ border-radius:5px;
 }
 .theme--newyear .cart,
 .theme--newyear .order {
-  background: #02202e;
+  background: #030c20;
 }
 .theme--newyear .order__right {
   border-color: #383838;
 }
 .theme--newyear .order__block {
-  background: #02202e;
+  background: #030c20;
   border-bottom: 5px solid #383838;
 }
 @media (max-width: 767px) {
@@ -494,7 +494,7 @@ border-radius:5px;
   }
 }
 .theme--newyear .order__actions {
-  background: #02202e;
+  background: #030c20;
 }
 .theme--newyear .order__actions-info {
   background: #1a1a1a;
