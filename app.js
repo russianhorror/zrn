@@ -282,8 +282,6 @@ function mouseIn() {
 /*        CURSOR FOLLOWERS          */
 /************************************/
 	
-	
+particlesJS.load('particles-js', 'particlesjs-config2.json');
 
 // SNOWFALL
-
-particlesJS.load('particles-js', 'particlesjs-config2.json');
