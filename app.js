@@ -27,8 +27,8 @@ bglowdiv(subjects);
 
 
   var possibleEmoji = ["❄", "*", ".", "+"]
-  var width = window.clientWidth;
-  var height = window.clientWidth;
+  var width = window.innerWidth;
+  var height = window.innerWidth;
   var cursor = {x: width/2, y: width/2};
   var particles = [];
   var thefirstChild = document.querySelector("#__nuxt");
@@ -48,8 +48,8 @@ bglowdiv(subjects);
   }
   
   function onWindowResize(e) {
-    width = window.clientWidth;
-    height = window.clientWidth;
+    width = window.innerWidth;
+    height = window.innerWidth;
   }
   
   function onTouchMove(e) {
