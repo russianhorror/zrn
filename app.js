@@ -1,13 +1,3 @@
-// SNOWFALL
-
-particlesJS.load('particles-js', 'particlesjs-config2.json');
-
-
-
-/*-----------------------------------*/
-
-
-
 /************************************/
 /* ADD BACKGLOW DIV TO PRODUCT CARD */
 /************* START ****************/
@@ -289,3 +279,8 @@ function mouseIn() {
 /************** END *****************/	
 /*        CURSOR FOLLOWERS          */
 /************************************/
+
+
+// SNOWFALL
+
+particlesJS.load('particles-js', 'particlesjs-config2.json');
