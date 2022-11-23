@@ -612,11 +612,11 @@ svg #spintext {
   transform: scale(0.8);
 }
 #aura.active {
-  border: 1px solid rgba(255,255,255,.2);
+  border: 1px solid rgba(255,255,255,0);
   transform: scale(2);
-  background-color: rgba(255,255,255,.1);
-  -webkit-backdrop-filter: blur(1px);
-	backdrop-filter: blur(1px);
+  background-color: rgba(255,255,255,0);
+  /* -webkit-backdrop-filter: blur(1px);
+	backdrop-filter: blur(1px); */
 }
 
 .hidden {
