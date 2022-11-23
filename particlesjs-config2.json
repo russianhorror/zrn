@@ -96,7 +96,7 @@
       },
       "repulse": {
         "distance": 40,
-        "duration": 0.8
+        "duration": 0.1
       },
       "push": {
         "particles_nb": 4
