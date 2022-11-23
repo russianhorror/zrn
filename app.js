@@ -276,6 +276,14 @@ function mouseIn() {
   follower2.classList.remove("hidden");
 }
 
+
+
+/************** END *****************/	
+/*        CURSOR FOLLOWERS          */
+/************************************/
+	
+	
+
 // SNOWFALL
 
 particlesJS.load('particles-js', 'particlesjs-config2.json');
