@@ -72,7 +72,7 @@
     "events": {
       "onhover": {
         "enable": true,
-        "mode": "push"
+        "mode": "repulse"
       },
       "onclick": {
         "enable": true,
@@ -99,10 +99,10 @@
         "duration": 0.4
       },
       "push": {
-        "particles_nb": 14
+        "particles_nb": 4
       },
       "remove": {
-        "particles_nb": 7
+        "particles_nb": 2
       }
     }
   },
