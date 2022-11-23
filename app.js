@@ -10,7 +10,7 @@ bglowdiv(subjects);
 	
 	
 
-particlesJS.load('particles-js', 'particlesjs-config.json');
+particlesJS.load('particles-js', 'particlesjs-config2.json');
 
 // Cursor
 var cursor = document.getElementById("cursor"),
