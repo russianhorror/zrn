@@ -5,6 +5,7 @@
   var height = window.innerHeight;
   var cursor = {x: width/2, y: width/2};
   var particles = [];
+  var thefirstChild = getElementById("cursor");
   
   function init() {
     bindEvents();
@@ -99,7 +100,7 @@
       applyProperties(this.element, this.initialStyles);
       this.update();
       
-      document.body.insertBefore(this.element, parentElement.firstChild);
+      document.body.insertBefore(this.element, thefirstChild);
     };
     
     this.update = function() {
