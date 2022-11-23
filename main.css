@@ -8732,11 +8732,11 @@ body.hidden {
   white-space: nowrap;
 }
 .catalog__content {
-  margin-bottom: 166px;
+  margin-bottom: 1px;
 }
 @media (max-width: 767px) {
   .catalog__content {
-    margin-bottom: 50px;
+    margin-bottom: 1px;
   }
 }
 .colors__list {
