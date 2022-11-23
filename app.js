@@ -25,8 +25,7 @@ bglowdiv(subjects);
 /*         CURSOR EMITTER           */
 /************* START ****************/
 
-function emitterCursor() {
-  
+
   var possibleEmoji = ["❄", "*", ".", "+"]
   var width = window.clientWidth;
   var height = window.clientWidth;
