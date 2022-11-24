@@ -31,7 +31,7 @@ bglowdiv(subjects);
   var height = window.innerWidth;
   var cursor = {x: width/2, y: width/2};
   var particles = [];
-  var thefirstChild = document.querySelector("#__nuxt");
+  var snowChild = document.querySelector("#particles-js");
   
   function init() {
     bindEvents();
@@ -126,7 +126,7 @@ bglowdiv(subjects);
       applyProperties(this.element, this.initialStyles);
       this.update();
       
-      document.body.insertBefore(this.element, thefirstChild);
+      snowChild.appendChild(this.element);
 
     };
     
