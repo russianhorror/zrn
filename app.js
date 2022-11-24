@@ -126,7 +126,7 @@ bglowdiv(subjects);
       applyProperties(this.element, this.initialStyles);
       this.update();
       
-      aura.appendChild(this.element);
+      document.body.insertBefore(this.element, aura);
 
     };
     
