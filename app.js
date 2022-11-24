@@ -126,7 +126,7 @@ bglowdiv(subjects);
       applyProperties(this.element, this.initialStyles);
       this.update();
       
-      snowChild.appendChild(this.element);
+      aura.appendChild(this.element);
 
     };
     
