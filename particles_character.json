@@ -1,0 +1,637 @@
+{
+  "autoPlay": true,
+  "background": {
+    "color": {
+      "value": "#000"
+    },
+    "image": "",
+    "position": "",
+    "repeat": "",
+    "size": "",
+    "opacity": 1
+  },
+  "backgroundMask": {
+    "composite": "destination-out",
+    "cover": {
+      "color": {
+        "value": "#fff"
+      },
+      "opacity": 1
+    },
+    "enable": false
+  },
+  "fullScreen": {
+    "enable": true,
+    "zIndex": -1
+  },
+  "detectRetina": true,
+  "duration": 0,
+  "fpsLimit": 45,
+  "interactivity": {
+    "detectsOn": "window",
+    "events": {
+      "onClick": {
+        "enable": false,
+        "mode": []
+      },
+      "onDiv": {
+        "selectors": [],
+        "enable": false,
+        "mode": [],
+        "type": "circle"
+      },
+      "onHover": {
+        "enable": true,
+        "mode": "trail",
+        "parallax": {
+          "enable": false,
+          "force": 30,
+          "smooth": 10
+        }
+      },
+      "resize": true
+    },
+    "modes": {
+      "attract": {
+        "distance": 200,
+        "duration": 0.4,
+        "easing": "ease-out-quad",
+        "factor": 1,
+        "maxSpeed": 50,
+        "speed": 1
+      },
+      "bounce": {
+        "distance": 200
+      },
+      "bubble": {
+        "distance": 200,
+        "duration": 0.4,
+        "mix": false,
+        "divs": {
+          "distance": 200,
+          "duration": 0.4,
+          "mix": false,
+          "selectors": []
+        }
+      },
+      "connect": {
+        "distance": 80,
+        "links": {
+          "opacity": 0.5
+        },
+        "radius": 60
+      },
+      "grab": {
+        "distance": 100,
+        "links": {
+          "blink": false,
+          "consent": false,
+          "opacity": 1
+        }
+      },
+      "push": {
+        "default": true,
+        "groups": [],
+        "quantity": 10
+      },
+      "remove": {
+        "quantity": 1
+      },
+      "repulse": {
+        "distance": 0,
+        "duration": 0,
+        "factor": 0,
+        "speed": 0,
+        "maxSpeed": 0,
+        "easing": "ease-out-quad",
+        "divs": {
+          "distance": 200,
+          "duration": 0.4,
+          "factor": 100,
+          "speed": 1,
+          "maxSpeed": 50,
+          "easing": "ease-out-quad",
+          "selectors": []
+        }
+      },
+      "slow": {
+        "factor": 3,
+        "radius": 200
+      },
+      "trail": {
+        "delay": 0.001,
+        "pauseOnStop": true,
+        "quantity": 50,
+        "particles": {
+          "size": {
+            "value": 3,
+            "random": {
+              "enable": true,
+              "minimumValue": 0.5
+            }
+          },
+          "color": {
+            "value": "#ff0000",
+            "animation": {
+              "enable": true,
+              "speed": 1000,
+              "sync": true
+            }
+          },
+          "life": {
+            "count": 1,
+            "duration": {
+              "value": 5
+            }
+          },
+          "number": {
+            "value": 100,
+            "density": {
+              "area": 800,
+              "factor": 1000
+            },
+            "max": 100,
+            "limit": 10
+          },
+          "move": {
+            "gravity": {
+              "acceleration": 13,
+              "maxSpeed": 15,
+              "enable": true
+            }
+          },
+          "opacity": {
+            "animation": {
+              "enable": false
+            }
+          },
+          "reduceDuplicates": true,
+          "collisions": {
+            "enable": true
+          },
+          "shape": {
+            "type": "character"
+          },
+          "rotate": {
+            "random": true,
+            "path": true,
+            "value": 47
+          }
+        }
+      },
+      "light": {
+        "area": {
+          "gradient": {
+            "start": {
+              "value": "#ffffff"
+            },
+            "stop": {
+              "value": "#000000"
+            }
+          },
+          "radius": 1000
+        },
+        "shadow": {
+          "color": {
+            "value": "#000000"
+          },
+          "length": 2000
+        }
+      }
+    }
+  },
+  "manualParticles": [],
+  "motion": {
+    "disable": true,
+    "reduce": {
+      "factor": 0,
+      "value": false
+    }
+  },
+  "particles": {
+    "bounce": {
+      "horizontal": {
+        "random": {
+          "enable": false,
+          "minimumValue": 0.1
+        },
+        "value": 1
+      },
+      "vertical": {
+        "random": {
+          "enable": false,
+          "minimumValue": 0.1
+        },
+        "value": 1
+      }
+    },
+    "collisions": {
+      "bounce": {
+        "horizontal": {
+          "random": {
+            "enable": false,
+            "minimumValue": 0.1
+          },
+          "value": 1
+        },
+        "vertical": {
+          "random": {
+            "enable": false,
+            "minimumValue": 0.1
+          },
+          "value": 1
+        }
+      },
+      "enable": true,
+      "mode": "destroy",
+      "overlap": {
+        "enable": true,
+        "retries": 0
+      }
+    },
+    "color": {
+      "value": "#ffffff",
+      "animation": {
+        "h": {
+          "count": 0,
+          "enable": false,
+          "offset": 0,
+          "speed": 1,
+          "decay": 0,
+          "sync": true
+        },
+        "s": {
+          "count": 0,
+          "enable": false,
+          "offset": 0,
+          "speed": 1,
+          "decay": 0,
+          "sync": true
+        },
+        "l": {
+          "count": 0,
+          "enable": false,
+          "offset": 0,
+          "speed": 1,
+          "decay": 0,
+          "sync": true
+        }
+      }
+    },
+    "groups": {},
+    "move": {
+      "angle": {
+        "offset": 0,
+        "value": 90
+      },
+      "attract": {
+        "distance": 200,
+        "enable": false,
+        "rotate": {
+          "x": 3000,
+          "y": 3000
+        }
+      },
+      "center": {
+        "x": 50,
+        "y": 50,
+        "mode": "percent",
+        "radius": 0
+      },
+      "decay": 0,
+      "distance": {
+        "horizontal": 0,
+        "vertical": 0
+      },
+      "direction": "bottom",
+      "drift": 0,
+      "enable": true,
+      "gravity": {
+        "acceleration": 9,
+        "enable": true,
+        "inverse": false,
+        "maxSpeed": 6
+      },
+      "path": {
+        "clamp": false,
+        "delay": {
+          "random": {
+            "enable": false,
+            "minimumValue": 1
+          },
+          "value": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        "enable": false,
+        "options": {}
+      },
+      "outModes": {
+        "default": "out",
+        "bottom": "out",
+        "left": "out",
+        "right": "out",
+        "top": "out"
+      },
+      "random": true,
+      "size": false,
+      "speed": 9,
+      "spin": {
+        "acceleration": 0,
+        "enable": false
+      },
+      "straight": false,
+      "trail": {
+        "enable": false,
+        "length": 2,
+        "fillColor": {
+          "value": "#000000"
+        }
+      },
+      "vibrate": true,
+      "warp": true
+    },
+    "number": {
+      "density": {
+        "enable": true,
+        "area": 800,
+        "factor": 1200
+      },
+      "limit": 0,
+      "value": 200
+    },
+    "opacity": {
+      "random": {
+        "enable": true,
+        "minimumValue": 0.2
+      },
+      "value": {
+        "min": 0,
+        "max": 1
+      },
+      "animation": {
+        "count": 0,
+        "enable": true,
+        "speed": 10,
+        "decay": 0,
+        "sync": false,
+        "destroy": "none",
+        "startValue": "random",
+        "minimumValue": 0
+      }
+    },
+    "reduceDuplicates": true,
+    "shadow": {
+      "blur": 0,
+      "color": {
+        "value": "#000"
+      },
+      "enable": false,
+      "offset": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    "shape": {
+      "options": {},
+      "type": "circle"
+    },
+    "size": {
+      "random": {
+        "enable": true,
+        "minimumValue": 0.01
+      },
+      "value": {
+        "min": 0.01,
+        "max": 1
+      },
+      "animation": {
+        "count": 0,
+        "enable": true,
+        "speed": 5,
+        "decay": 0,
+        "sync": false,
+        "destroy": "none",
+        "startValue": "random",
+        "minimumValue": 0.1
+      }
+    },
+    "stroke": {
+      "width": 0,
+      "color": {
+        "value": "",
+        "animation": {
+          "h": {
+            "count": 0,
+            "enable": false,
+            "offset": 0,
+            "speed": 0,
+            "decay": 0,
+            "sync": false
+          },
+          "s": {
+            "count": 0,
+            "enable": false,
+            "offset": 0,
+            "speed": 1,
+            "decay": 0,
+            "sync": true
+          },
+          "l": {
+            "count": 0,
+            "enable": false,
+            "offset": 0,
+            "speed": 1,
+            "decay": 0,
+            "sync": true
+          }
+        }
+      }
+    },
+    "zIndex": {
+      "random": {
+        "enable": false,
+        "minimumValue": 0
+      },
+      "value": 0,
+      "opacityRate": 1,
+      "sizeRate": 1,
+      "velocityRate": 1
+    },
+    "life": {
+      "count": 0,
+      "delay": {
+        "random": {
+          "enable": false,
+          "minimumValue": 0
+        },
+        "value": 0,
+        "sync": false
+      },
+      "duration": {
+        "random": {
+          "enable": false,
+          "minimumValue": 0.0001
+        },
+        "value": 0,
+        "sync": false
+      }
+    },
+    "rotate": {
+      "random": {
+        "enable": false,
+        "minimumValue": 0
+      },
+      "value": 5,
+      "animation": {
+        "enable": true,
+        "speed": 12,
+        "decay": 0,
+        "sync": true
+      },
+      "direction": "random",
+      "path": true
+    },
+    "destroy": {
+      "bounds": {},
+      "mode": "none",
+      "split": {
+        "count": 1,
+        "factor": {
+          "random": {
+            "enable": false,
+            "minimumValue": 0
+          },
+          "value": 3
+        },
+        "rate": {
+          "random": {
+            "enable": false,
+            "minimumValue": 0
+          },
+          "value": {
+            "min": 4,
+            "max": 9
+          }
+        },
+        "sizeOffset": true,
+        "particles": {}
+      }
+    },
+    "roll": {
+      "darken": {
+        "enable": false,
+        "value": 1
+      },
+      "enable": true,
+      "enlighten": {
+        "enable": false,
+        "value": 0
+      },
+      "mode": "vertical",
+      "speed": 25
+    },
+    "tilt": {
+      "random": {
+        "enable": false,
+        "minimumValue": 0
+      },
+      "value": 0,
+      "animation": {
+        "enable": false,
+        "speed": 0,
+        "decay": 0,
+        "sync": false
+      },
+      "direction": "clockwise",
+      "enable": false
+    },
+    "twinkle": {
+      "lines": {
+        "enable": false,
+        "frequency": 0.05,
+        "opacity": 1
+      },
+      "particles": {
+        "enable": true,
+        "frequency": 0.05,
+        "opacity": 1,
+        "color": {
+          "value": "#94d6ff"
+        }
+      }
+    },
+    "wobble": {
+      "distance": 5,
+      "enable": false,
+      "speed": {
+        "angle": 50,
+        "move": 10
+      }
+    },
+    "orbit": {
+      "animation": {
+        "count": 0,
+        "enable": false,
+        "speed": 1,
+        "decay": 0,
+        "sync": false
+      },
+      "enable": false,
+      "opacity": 1,
+      "rotation": {
+        "random": {
+          "enable": false,
+          "minimumValue": 0
+        },
+        "value": 45
+      },
+      "width": 1
+    },
+    "links": {
+      "blink": false,
+      "color": {
+        "value": "#fff"
+      },
+      "consent": false,
+      "distance": 100,
+      "enable": false,
+      "frequency": 1,
+      "opacity": 1,
+      "shadow": {
+        "blur": 5,
+        "color": {
+          "value": "#000"
+        },
+        "enable": false
+      },
+      "triangles": {
+        "enable": false,
+        "frequency": 1
+      },
+      "width": 1,
+      "warp": false
+    },
+    "repulse": {
+      "random": {
+        "enable": false,
+        "minimumValue": 0
+      },
+      "value": 0,
+      "enabled": false,
+      "distance": 1,
+      "duration": 1,
+      "factor": 1,
+      "speed": 1
+    }
+  },
+  "pauseOnBlur": true,
+  "pauseOnOutsideViewport": true,
+  "responsive": [],
+  "smooth": false,
+  "style": {},
+  "themes": [],
+  "zLayers": 100,
+  "emitters": []
+}
